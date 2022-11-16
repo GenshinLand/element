@@ -12,8 +12,11 @@ declare(strict_types=1);
 namespace Genshin\Element\Reaction;
 
 /**
- * 无作用.
+ * 多级反应.
  */
-class None implements ReactionInterface
+class Union implements ReactionInterface
 {
+    public function __construct(public ?Increase $increase)
+    {
+    }
 }

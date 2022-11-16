@@ -12,8 +12,8 @@ declare(strict_types=1);
 namespace Genshin\Element\Reaction;
 
 /**
- * 无作用.
+ * 增幅反应.
  */
-class None implements ReactionInterface
+class Increase implements ReactionInterface
 {
 }
