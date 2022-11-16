@@ -18,4 +18,6 @@ interface ElementInterface
     public function react(ElementInterface $element): ReactionInterface;
 
     public function toEnum(): Enum;
+
+    public function getValue(): int;
 }
