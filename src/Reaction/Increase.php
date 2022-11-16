@@ -16,7 +16,7 @@ namespace Genshin\Element\Reaction;
  */
 class Increase implements ReactionInterface
 {
-    public function __construct(public float $increase)
+    public function __construct(public float $value)
     {
     }
 }
