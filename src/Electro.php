@@ -11,9 +11,16 @@ declare(strict_types=1);
  */
 namespace Genshin\Element;
 
+use Genshin\Element\Reaction\None;
+use Genshin\Element\Reaction\ReactionInterface;
+
 /**
  * 雷元素.
  */
-class Electro
+class Electro implements ElementInterface
 {
+    public function react(ElementInterface $element): ReactionInterface
+    {
+        return new None();
+    }
 }

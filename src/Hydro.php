@@ -11,9 +11,16 @@ declare(strict_types=1);
  */
 namespace Genshin\Element;
 
+use Genshin\Element\Reaction\None;
+use Genshin\Element\Reaction\ReactionInterface;
+
 /**
  * 水元素.
  */
-class Hydro
+class Hydro implements ElementInterface
 {
+    public function react(ElementInterface $element): ReactionInterface
+    {
+        return new None();
+    }
 }

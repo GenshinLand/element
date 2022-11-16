@@ -11,16 +11,9 @@ declare(strict_types=1);
  */
 namespace Genshin\Element;
 
-use Genshin\Element\Reaction\None;
 use Genshin\Element\Reaction\ReactionInterface;
 
-/**
- * 岩元素.
- */
-class Geo implements ElementInterface
+interface ElementInterface
 {
-    public function react(ElementInterface $element): ReactionInterface
-    {
-        return new None();
-    }
+    public function react(ElementInterface $element): ReactionInterface;
 }
