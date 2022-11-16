@@ -23,4 +23,9 @@ class Electro extends Element
     {
         return new None();
     }
+
+    public function toEnum(): Enum
+    {
+        return Enum::ELECTRO;
+    }
 }

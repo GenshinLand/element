@@ -11,11 +11,13 @@ declare(strict_types=1);
  */
 namespace Genshin\Element;
 
-use Genshin\Element\Reaction\ReactionInterface;
-
-interface ElementInterface
+enum Enum: string
 {
-    public function react(ElementInterface $element): ReactionInterface;
-
-    public function toEnum(): Enum;
+    case ANEMO = 'Anemo';
+    case CRYO = 'Cryo';
+    case DENDRO = 'Dendro';
+    case ELECTRO = 'Electro';
+    case GEO = 'Geo';
+    case HYDRO = 'Hydro';
+    case PYRO = 'Pyro';
 }

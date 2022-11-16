@@ -23,4 +23,9 @@ class Hydro extends Element
     {
         return new None();
     }
+
+    public function toEnum(): Enum
+    {
+        return Enum::HYDRO;
+    }
 }

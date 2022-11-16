@@ -22,13 +22,21 @@ class Pyro extends Element
 {
     public function react(ElementInterface $element): ReactionInterface
     {
-        switch (true) {
-            case $element instanceof Hydro:
-                // 蒸发反应
-                $element->value--;
-                return new Increase(0.5);
-        }
+        return match ($element->toEnum()) {
+            Enum::HYDRO => $this->reactHydro($element),
+            default => new None()
+        };
+    }
 
-        return new None();
+    public function toEnum(): Enum
+    {
+        return Enum::PYRO;
+    }
+
+    public function reactHydro($element)
+    {
+        // 蒸发反应
+        --$element->value;
+        return new Increase(0.5);
     }
 }

@@ -23,4 +23,9 @@ class Dendro extends Element
     {
         return new None();
     }
+
+    public function toEnum(): Enum
+    {
+        return Enum::DENDRO;
+    }
 }
