@@ -17,7 +17,7 @@ use Genshin\Element\Reaction\ReactionInterface;
 /**
  * 草元素.
  */
-class Dendro implements ElementInterface
+class Dendro extends Element
 {
     public function react(ElementInterface $element): ReactionInterface
     {

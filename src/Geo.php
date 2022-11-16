@@ -17,7 +17,7 @@ use Genshin\Element\Reaction\ReactionInterface;
 /**
  * 岩元素.
  */
-class Geo implements ElementInterface
+class Geo extends Element
 {
     public function react(ElementInterface $element): ReactionInterface
     {

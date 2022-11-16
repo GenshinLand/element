@@ -17,7 +17,7 @@ use Genshin\Element\Reaction\ReactionInterface;
 /**
  * 风元素.
  */
-class Anemo implements ElementInterface
+class Anemo extends Element
 {
     public function react(ElementInterface $element): ReactionInterface
     {

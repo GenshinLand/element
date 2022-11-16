@@ -17,7 +17,7 @@ use Genshin\Element\Reaction\ReactionInterface;
 /**
  * 水元素.
  */
-class Hydro implements ElementInterface
+class Hydro extends Element
 {
     public function react(ElementInterface $element): ReactionInterface
     {

@@ -11,16 +11,24 @@ declare(strict_types=1);
  */
 namespace Genshin\Element;
 
+use Genshin\Element\Reaction\Increase;
 use Genshin\Element\Reaction\None;
 use Genshin\Element\Reaction\ReactionInterface;
 
 /**
  * 火元素.
  */
-class Pyro implements ElementInterface
+class Pyro extends Element
 {
     public function react(ElementInterface $element): ReactionInterface
     {
+        switch (true) {
+            case $element instanceof Hydro:
+                // 蒸发反应
+                $element->value--;
+                return new Increase(0.5);
+        }
+
         return new None();
     }
 }

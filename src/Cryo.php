@@ -17,7 +17,7 @@ use Genshin\Element\Reaction\ReactionInterface;
 /**
  * 冰元素.
  */
-class Cryo implements ElementInterface
+class Cryo extends Element
 {
     public function react(ElementInterface $element): ReactionInterface
     {
