@@ -23,7 +23,7 @@ class Pyro extends Element
     public function react(ElementInterface $element): ReactionInterface
     {
         return match ($element->toEnum()) {
-            Enum::HYDRO => $this->reactHydro($element),
+            Enum::HYDRO => $this->evaporation($element),
             default => new None()
         };
     }
@@ -33,10 +33,13 @@ class Pyro extends Element
         return Enum::PYRO;
     }
 
-    public function reactHydro($element)
+    /**
+     * 蒸发.
+     */
+    protected function evaporation(ElementInterface $element)
     {
-        // 蒸发反应
-        --$element->value;
+        $element->setValue($element->getValue() - 1);
+
         return new Increase(0.5);
     }
 }

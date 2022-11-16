@@ -20,4 +20,6 @@ interface ElementInterface
     public function toEnum(): Enum;
 
     public function getValue(): int;
+
+    public function setValue(int $value): void;
 }

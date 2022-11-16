@@ -11,6 +11,7 @@ declare(strict_types=1);
  */
 namespace Genshin\Element;
 
+use Genshin\Element\Reaction\Increase;
 use Genshin\Element\Reaction\None;
 use Genshin\Element\Reaction\ReactionInterface;
 
@@ -21,11 +22,24 @@ class Hydro extends Element
 {
     public function react(ElementInterface $element): ReactionInterface
     {
-        return new None();
+        return match ($element->toEnum()) {
+            Enum::PYRO => $this->evaporation($element),
+            default => new None()
+        };
     }
 
     public function toEnum(): Enum
     {
         return Enum::HYDRO;
+    }
+
+    /**
+     * 蒸发.
+     */
+    protected function evaporation(Hydro $element)
+    {
+        $element->setValue($element->getValue() - 5);
+
+        return new Increase(1.0);
     }
 }

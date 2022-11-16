@@ -19,4 +19,9 @@ abstract class Element implements ElementInterface
     {
         return $this->value;
     }
+
+    public function setValue(int $value): void
+    {
+        $this->value = $value;
+    }
 }
