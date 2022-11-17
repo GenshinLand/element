@@ -31,4 +31,12 @@ abstract class Element implements ElementInterface
     {
         return false;
     }
+
+    public function jsonSerialize(): mixed
+    {
+        return [
+            'enum' => $this->toEnum()->value,
+            'value' => $this->getValue(),
+        ];
+    }
 }

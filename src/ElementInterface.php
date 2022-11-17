@@ -13,7 +13,7 @@ namespace Sworder\Element;
 
 use Sworder\Element\Reaction\ReactionInterface;
 
-interface ElementInterface
+interface ElementInterface extends \JsonSerializable
 {
     /**
      * 反应.
