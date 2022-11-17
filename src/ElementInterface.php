@@ -20,7 +20,7 @@ interface ElementInterface
      */
     public function react(ElementInterface $element): ReactionInterface;
 
-    public function toEnum(): Enum;
+    public function toEnum(): MainElement|VariantElement;
 
     /**
      * 读取剩余附着值

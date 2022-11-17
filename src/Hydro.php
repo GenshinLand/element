@@ -23,14 +23,14 @@ class Hydro extends Element
     public function react(ElementInterface $element): ReactionInterface
     {
         return match ($element->toEnum()) {
-            Enum::PYRO => $this->evaporation($element),
+            MainElement::PYRO => $this->evaporation($element),
             default => new None()
         };
     }
 
-    public function toEnum(): Enum
+    public function toEnum(): MainElement|VariantElement
     {
-        return Enum::HYDRO;
+        return MainElement::HYDRO;
     }
 
     public function isAttach(): bool

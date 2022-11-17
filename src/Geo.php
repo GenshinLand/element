@@ -24,9 +24,9 @@ class Geo extends Element
         return new None();
     }
 
-    public function toEnum(): Enum
+    public function toEnum(): MainElement|VariantElement
     {
-        return Enum::GEO;
+        return MainElement::GEO;
     }
 
     public function isAttach(): bool

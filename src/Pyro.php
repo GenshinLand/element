@@ -23,14 +23,14 @@ class Pyro extends Element
     public function react(ElementInterface $element): ReactionInterface
     {
         return match ($element->toEnum()) {
-            Enum::HYDRO => $this->evaporation($element),
+            MainElement::HYDRO => $this->evaporation($element),
             default => new None()
         };
     }
 
-    public function toEnum(): Enum
+    public function toEnum(): MainElement|VariantElement
     {
-        return Enum::PYRO;
+        return MainElement::PYRO;
     }
 
     public function isAttach(): bool

@@ -24,8 +24,8 @@ class Cryo extends Element
         return new None();
     }
 
-    public function toEnum(): Enum
+    public function toEnum(): MainElement|VariantElement
     {
-        return Enum::CRYO;
+        return VariantElement::CRYO;
     }
 }

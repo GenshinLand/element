@@ -24,9 +24,9 @@ class Gold extends Element
         return new None();
     }
 
-    public function toEnum(): Enum
+    public function toEnum(): MainElement|VariantElement
     {
-        return Enum::GOLD;
+        return MainElement::GOLD;
     }
 
     public function isAttach(): bool

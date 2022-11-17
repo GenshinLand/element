@@ -24,9 +24,9 @@ class Dendro extends Element
         return new None();
     }
 
-    public function toEnum(): Enum
+    public function toEnum(): MainElement|VariantElement
     {
-        return Enum::DENDRO;
+        return MainElement::DENDRO;
     }
 
     public function isAttach(): bool
