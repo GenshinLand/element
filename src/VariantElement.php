@@ -11,7 +11,7 @@ declare(strict_types=1);
  */
 namespace Genshin\Element;
 
-enum VariantElement: string
+enum VariantElement: string implements ElementEnumInterface
 {
     // 风元素
     case ANEMO = 'Anemo';
@@ -21,4 +21,13 @@ enum VariantElement: string
 
     // 雷元素
     case ELECTRO = 'Electro';
+
+    public function make(): ElementInterface
+    {
+        return match ($this) {
+            self::ANEMO => new Anemo(),
+            self::CRYO => new Cryo(),
+            self::ELECTRO => new Electro(),
+        };
+    }
 }

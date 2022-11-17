@@ -11,7 +11,7 @@ declare(strict_types=1);
  */
 namespace Genshin\Element;
 
-enum MainElement: string
+enum MainElement: string implements ElementEnumInterface
 {
     // 金元素
     case GOLD = 'Gold';
@@ -27,4 +27,15 @@ enum MainElement: string
 
     // 土元素
     case GEO = 'Geo';
+
+    public function make(): ElementInterface
+    {
+        return match ($this) {
+            self::GOLD => new Gold(),
+            self::DENDRO => new Dendro(),
+            self::HYDRO => new Hydro(),
+            self::PYRO => new Pyro(),
+            self::GEO => new Geo(),
+        };
+    }
 }
