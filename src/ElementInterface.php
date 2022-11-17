@@ -11,9 +11,10 @@ declare(strict_types=1);
  */
 namespace Sworder\Element;
 
+use JsonSerializable;
 use Sworder\Element\Reaction\ReactionInterface;
 
-interface ElementInterface extends \JsonSerializable
+interface ElementInterface extends JsonSerializable
 {
     /**
      * 反应.
