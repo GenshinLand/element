@@ -11,12 +11,7 @@ declare(strict_types=1);
  */
 namespace Genshin\Element\Reaction;
 
-/**
- * 延长反应.
- */
-class Prolong implements ReactionInterface
+interface IncreaseInterface
 {
-    public function __construct(public int $value)
-    {
-    }
+    public function increase(): float;
 }

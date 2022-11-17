@@ -11,16 +11,13 @@ declare(strict_types=1);
  */
 namespace Genshin\Element\Reaction;
 
-/**
- * 增幅反应.
- */
-class Increase implements ReactionInterface, IncreaseInterface
+class Consume implements ReactionInterface, ConsumeInterface
 {
-    public function __construct(public float $value)
+    public function __construct(public int $value)
     {
     }
 
-    public function increase(): float
+    public function consume(): int
     {
         return $this->value;
     }

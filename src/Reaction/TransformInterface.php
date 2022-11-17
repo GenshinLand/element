@@ -11,17 +11,9 @@ declare(strict_types=1);
  */
 namespace Genshin\Element\Reaction;
 
-/**
- * 增幅反应.
- */
-class Increase implements ReactionInterface, IncreaseInterface
-{
-    public function __construct(public float $value)
-    {
-    }
+use Genshin\Element\MainElement;
 
-    public function increase(): float
-    {
-        return $this->value;
-    }
+interface TransformInterface
+{
+    public function transform(): ?MainElement;
 }
