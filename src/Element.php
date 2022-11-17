@@ -24,4 +24,9 @@ abstract class Element implements ElementInterface
     {
         $this->value = $value;
     }
+
+    public function isAttach(): bool
+    {
+        return false;
+    }
 }

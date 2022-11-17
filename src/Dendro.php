@@ -15,7 +15,7 @@ use Genshin\Element\Reaction\None;
 use Genshin\Element\Reaction\ReactionInterface;
 
 /**
- * 草元素.
+ * 木元素.
  */
 class Dendro extends Element
 {
@@ -27,5 +27,10 @@ class Dendro extends Element
     public function toEnum(): Enum
     {
         return Enum::DENDRO;
+    }
+
+    public function isAttach(): bool
+    {
+        return true;
     }
 }

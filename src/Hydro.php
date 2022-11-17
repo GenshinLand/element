@@ -33,6 +33,11 @@ class Hydro extends Element
         return Enum::HYDRO;
     }
 
+    public function isAttach(): bool
+    {
+        return true;
+    }
+
     /**
      * 蒸发.
      */

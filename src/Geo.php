@@ -15,7 +15,7 @@ use Genshin\Element\Reaction\None;
 use Genshin\Element\Reaction\ReactionInterface;
 
 /**
- * 岩元素.
+ * 土元素.
  */
 class Geo extends Element
 {
@@ -27,5 +27,10 @@ class Geo extends Element
     public function toEnum(): Enum
     {
         return Enum::GEO;
+    }
+
+    public function isAttach(): bool
+    {
+        return true;
     }
 }

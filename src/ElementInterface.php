@@ -15,11 +15,25 @@ use Genshin\Element\Reaction\ReactionInterface;
 
 interface ElementInterface
 {
+    /**
+     * 反应.
+     */
     public function react(ElementInterface $element): ReactionInterface;
 
     public function toEnum(): Enum;
 
+    /**
+     * 读取剩余附着值
+     */
     public function getValue(): int;
 
+    /**
+     * 设置当前附着值
+     */
     public function setValue(int $value): void;
+
+    /**
+     * 是否允许被附着
+     */
+    public function isAttach(): bool;
 }

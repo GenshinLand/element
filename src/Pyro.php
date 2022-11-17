@@ -33,6 +33,11 @@ class Pyro extends Element
         return Enum::PYRO;
     }
 
+    public function isAttach(): bool
+    {
+        return true;
+    }
+
     /**
      * 蒸发.
      */

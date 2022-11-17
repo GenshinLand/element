@@ -14,6 +14,9 @@ namespace Genshin\Element;
 use Genshin\Element\Reaction\None;
 use Genshin\Element\Reaction\ReactionInterface;
 
+/**
+ * 金.
+ */
 class Gold extends Element
 {
     public function react(ElementInterface $element): ReactionInterface
@@ -24,5 +27,10 @@ class Gold extends Element
     public function toEnum(): Enum
     {
         return Enum::GOLD;
+    }
+
+    public function isAttach(): bool
+    {
+        return true;
     }
 }
