@@ -19,9 +19,9 @@ use Genshin\Element\MainElement;
 class Union implements ReactionInterface, IncreaseInterface, ConsumeInterface, TransformInterface
 {
     public function __construct(
-        public ?Increase $increase,
-        public ?Consume $consume,
-        public ?Transform $transform,
+        public ?Increase $increase = null,
+        public ?Consume $consume = null,
+        public ?Transform $transform = null,
     ) {
     }
 

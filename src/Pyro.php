@@ -11,9 +11,11 @@ declare(strict_types=1);
  */
 namespace Genshin\Element;
 
+use Genshin\Element\Reaction\Consume;
 use Genshin\Element\Reaction\Increase;
 use Genshin\Element\Reaction\None;
 use Genshin\Element\Reaction\ReactionInterface;
+use Genshin\Element\Reaction\Union;
 
 /**
  * 火元素.
@@ -23,7 +25,8 @@ class Pyro extends Element
     public function react(ElementInterface $element): ReactionInterface
     {
         return match ($element->toEnum()) {
-            MainElement::HYDRO => $this->evaporation($element),
+            MainElement::GOLD => new Union(new Increase(1.0), new Consume(5)),
+            MainElement::GEO => new Union(new Increase(-0.5), new Consume(-5)),
             default => new None()
         };
     }
