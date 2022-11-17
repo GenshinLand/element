@@ -9,7 +9,7 @@
     "description": "",
     "autoload": {
         "psr-4": {
-            "Genshin\\Element\\": "src/"
+            "Sworder\\Element\\": "src/"
         }
     },
     "autoload-dev": {

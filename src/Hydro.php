@@ -9,13 +9,13 @@ declare(strict_types=1);
  * @contact  group@hyperf.io
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
-namespace Genshin\Element;
+namespace Sworder\Element;
 
-use Genshin\Element\Reaction\Consume;
-use Genshin\Element\Reaction\Increase;
-use Genshin\Element\Reaction\None;
-use Genshin\Element\Reaction\ReactionInterface;
-use Genshin\Element\Reaction\Union;
+use Sworder\Element\Reaction\Consume;
+use Sworder\Element\Reaction\Increase;
+use Sworder\Element\Reaction\None;
+use Sworder\Element\Reaction\ReactionInterface;
+use Sworder\Element\Reaction\Union;
 
 /**
  * 水元素.
