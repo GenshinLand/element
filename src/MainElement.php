@@ -28,14 +28,14 @@ enum MainElement: string implements ElementEnumInterface
     // 土元素
     case GEO = 'Geo';
 
-    public function make(): ElementInterface
+    public function make(int $value = 10): ElementInterface
     {
         return match ($this) {
-            self::GOLD => new Gold(),
-            self::DENDRO => new Dendro(),
-            self::HYDRO => new Hydro(),
-            self::PYRO => new Pyro(),
-            self::GEO => new Geo(),
+            self::GOLD => new Gold($value),
+            self::DENDRO => new Dendro($value),
+            self::HYDRO => new Hydro($value),
+            self::PYRO => new Pyro($value),
+            self::GEO => new Geo($value),
         };
     }
 }

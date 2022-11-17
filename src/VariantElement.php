@@ -22,12 +22,12 @@ enum VariantElement: string implements ElementEnumInterface
     // 雷元素
     case ELECTRO = 'Electro';
 
-    public function make(): ElementInterface
+    public function make(int $value = 10): ElementInterface
     {
         return match ($this) {
-            self::ANEMO => new Anemo(),
-            self::CRYO => new Cryo(),
-            self::ELECTRO => new Electro(),
+            self::ANEMO => new Anemo($value),
+            self::CRYO => new Cryo($value),
+            self::ELECTRO => new Electro($value),
         };
     }
 }
