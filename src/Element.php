@@ -13,7 +13,9 @@ namespace Genshin\Element;
 
 abstract class Element implements ElementInterface
 {
-    public int $value = 10;
+    public function __construct(public int $value = 10)
+    {
+    }
 
     public function getValue(): int
     {
