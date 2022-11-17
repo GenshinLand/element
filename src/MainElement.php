@@ -14,19 +14,19 @@ namespace Sworder\Element;
 enum MainElement: string implements ElementEnumInterface
 {
     // 金元素
-    case GOLD = 'Gold';
+    case GOLD = 'gold';
 
     // 木元素
-    case DENDRO = 'Dendro';
+    case DENDRO = 'dendro';
 
     // 水元素
-    case HYDRO = 'Hydro';
+    case HYDRO = 'hydro';
 
     // 火元素
-    case PYRO = 'Pyro';
+    case PYRO = 'pyro';
 
     // 土元素
-    case GEO = 'Geo';
+    case GEO = 'geo';
 
     public function make(int $value = 10): ElementInterface
     {

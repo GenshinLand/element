@@ -14,13 +14,13 @@ namespace Sworder\Element;
 enum VariantElement: string implements ElementEnumInterface
 {
     // 风元素
-    case ANEMO = 'Anemo';
+    case ANEMO = 'anemo';
 
     // 冰元素
-    case CRYO = 'Cryo';
+    case CRYO = 'cryo';
 
     // 雷元素
-    case ELECTRO = 'Electro';
+    case ELECTRO = 'electro';
 
     public function make(int $value = 10): ElementInterface
     {
