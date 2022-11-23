@@ -11,14 +11,22 @@ declare(strict_types=1);
  */
 namespace HyperfTest\Cases;
 
+use Sworder\Element\Cryo;
+
+use function Sworder\Element\element_from;
+
 /**
  * @internal
  * @coversNothing
  */
 class ExampleTest extends AbstractTestCase
 {
-    public function testExample()
+    public function testElementFrom()
     {
-        $this->assertTrue(true);
+        $el = new Cryo();
+
+        $el2 = element_from(json_decode(json_encode($el), true));
+
+        $this->assertEquals($el, $el2);
     }
 }
